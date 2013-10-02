@@ -1,4 +1,4 @@
-#!/usr/bin/env ruby -wKU
+#Perform algebraic operations on a string, e.g. "1 + 2" => 3
 
 def calculate_string(problem_string)
   problem_string[/(([-|\s])\d+)\D*(([-|\s])\d+)/]

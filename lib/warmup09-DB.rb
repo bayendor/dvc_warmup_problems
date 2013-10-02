@@ -1,3 +1,5 @@
+# Part2, play Sudoku, solve for each grid
+
 class SudokuSolver
   attr_accessor :game_board
 
@@ -59,6 +61,7 @@ class SudokuSolver
   end
 
   private
+
   def remove_impossible_answers(possible_answers, items_to_remove)
     # possible_answers is an array of [1,2,3,4,5,6,7,8,9]
     # items_to_remove is an array with [2,3,5]
@@ -91,11 +94,11 @@ class SudokuSolver
 
   def determine_min_max(number)
     if number <= 2
-      [0,2]
+      [0, 2]
     elsif number <= 5
-      [3,5]
+      [3, 5]
     else
-      [6,8]
+      [6, 8]
     end
   end
 end

@@ -23,5 +23,3 @@ class NumberGuesser
     end
   end
 end
-
-

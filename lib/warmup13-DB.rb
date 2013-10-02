@@ -1,3 +1,4 @@
+# Adds two fractions togther, then reduces
 class FractionCalculator
   attr_accessor :total, :numerator, :denominator
 

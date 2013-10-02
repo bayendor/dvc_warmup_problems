@@ -1,16 +1,35 @@
-#!/usr/bin/env ruby -wKU
-
+# Temperature conversion using self
 class Temperature
-  def initialize
-    @to_fahrenheit = 0
-    @to_celsius = 0
+  attr_accessor :temp_in_f
+
+  def initialize(temp)
+    self.temp_in_f = temp
   end
 
-  def from_celsius(celsius)
-    @to_fahrenheit = ((celsius * 9.0) / 5.0 + 32)
+  def self.from_fahrenheit(temp)
+    new(temp)
   end
 
-  def from_fahrenheit(fahrenheit)
-    @to_celsius = ((fahrenheit - 32) * 5.0 / 9.0)
+  def self.from_celsius(temp)
+    temp_in_f = celsius(temp)
+    new(temp_in_f)
+  end
+
+  def to_celsius
+    self.class.fahrenheit(temp_in_f)
+  end
+
+  def to_fahrenheit
+    temp_in_f
+  end
+
+  private
+
+  def self.celsius(temp)
+    ((temp * 9.0) / 5.0 + 32)
+  end
+
+  def self.fahrenheit(temp)
+    ((temp - 32) * 5.0 / 9.0)
   end
 end
