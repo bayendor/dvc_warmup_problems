@@ -1,5 +1,3 @@
-#!/usr/bin/env ruby -wKU
-
 # Utilizing TDD write a Say class that will spell out the positive numbers
 # in English starting from 0 to...
 # Examples:
@@ -81,5 +79,3 @@ class Say
     `say #{joshua_says}`
   end
 end
-
-

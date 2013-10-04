@@ -44,13 +44,10 @@ describe "Warmup 05: Say numbers in English" do
 
   end
 
-
-
-
-  # describe ".say" do
-  #   it "says it" do
-  #     pending
-  #   end
-  # end
+  describe ".say" do
+    it "says it" do
+      pending 'implement to OS X audio'
+    end
+  end
 
 end
