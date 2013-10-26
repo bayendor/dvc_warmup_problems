@@ -14,24 +14,23 @@ class SudokuSolver
         solutions = potential_solutions(index, index2)
         if solutions.length == 1
           puts "Changing #{index + 1}, #{index2 + 1} to #{solutions}"
-          self.game_board[index][index2] = solutions.first
+          game_board[index][index2] = solutions.first
           return true
         end
       end
     end
-    return false
+    false
   end
-
 
   def load_game(filename, game_number)
     filename = File.join(File.dirname(__FILE__), filename)
-    game_number = sprintf("%02d", game_number)
+    game_number = sprintf('%02d', game_number)
     File.open(filename) do |file|
       while(line = file.gets.chomp)
         if line =~ /Grid #{game_number}/
           while(line = file.gets.chomp)
             break if line =~ /Grid/
-            self.game_board << line.split('').map(&:to_i)
+            game_board << line.split('').map(&:to_i)
           end
           break
         end
@@ -40,7 +39,7 @@ class SudokuSolver
   end
 
   def to_s
-    game_board.map{|row| row.join('') }.join("\n")
+    game_board.map{ |row| row.join('') }.join("\n")
   end
 
   def potential_solutions(row, column_number)
@@ -52,7 +51,7 @@ class SudokuSolver
       # Remove all the known numbers in the same row
       possible_answers = remove_impossible_answers(possible_answers, game_board[row])
 
-      # Remove he the known numb
+      # Remove the known numbers
       possible_answers = remove_impossible_answers(possible_answers, column_values(game_board, column_number))
 
       # Remove all the known numbers in the same square

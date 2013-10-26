@@ -75,7 +75,7 @@ class Say
   end
 
   def speak_in_english
-    joshua_says = "'The number is #{self.in_english}'"
+    joshua_says = "'The number is #{in_english}'"
     `say #{joshua_says}`
   end
 end

@@ -36,7 +36,7 @@ class FractionCalculator
       delta = lcm / denominator
       @numerator = @numerator * delta
       @denominator = @numerator * delta
-      self.add(fraction)
+      add(fraction)
     end
     "#{numerator}/#{denominator}"
   end

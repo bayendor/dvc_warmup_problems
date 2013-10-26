@@ -45,4 +45,3 @@ class BeerSong
   end
 
 end
-
