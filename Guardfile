@@ -4,7 +4,7 @@
 guard :rspec,
       :all_on_start => true,
       :all_after_pass => true,
-      :cmd => "--order default" do  #--fail-fast
+      :cli => "--order default" do  #--fail-fast
   watch(%r{^spec/lib/.+_spec\.rb$})
   watch(%r{^lib/(.+)\.rb$})     { |m| "spec/lib/#{m[1]}_spec.rb" }
   watch('spec/spec_helper.rb')  { "spec" }
