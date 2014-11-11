@@ -41,4 +41,3 @@ class FractionCalculator
     "#{numerator}/#{denominator}"
   end
 end
-

@@ -4,7 +4,6 @@
 # If you guess the number it should say "you got it in # tries"
 
 class NumberGuesser
-
   attr_accessor :number, :guess_count
 
   def initialize

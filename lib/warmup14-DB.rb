@@ -1,6 +1,5 @@
 # FizzBuzz exercise re-written as a class
 class FizzBuzz
-
   def test_number(number)
     if number == 0
       'number is not allowed'
@@ -14,12 +13,10 @@ class FizzBuzz
       number
     end
   end
-
 end
 
 # BeerSong rewritten as a class
 class BeerSong
-
   def pluralize(bottle_num)
     if bottle_num == 1
       "#{bottle_num} bottle"
@@ -30,7 +27,7 @@ class BeerSong
     end
   end
 
- # call beer song for any number of bottles.
+  # call beer song for any number of bottles.
   def verses(number_of_bottles)
     verse_array = []
     if number_of_bottles <= 0
@@ -43,5 +40,4 @@ class BeerSong
     end
     verse_array
   end
-
 end

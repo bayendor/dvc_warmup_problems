@@ -15,7 +15,6 @@
 # Write a program that generates any arbitrary sized multiplication table.
 
 class MultiplicationTable
-
   attr_accessor :table_array
 
   def initialize
@@ -37,5 +36,4 @@ class MultiplicationTable
       puts "#{x} #{table_array[x - 1].join(' ')}"
     end
   end
-
 end

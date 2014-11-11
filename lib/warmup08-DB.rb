@@ -1,6 +1,5 @@
 # Part1, load a sudoku grid from a text file
 class SudokuSolver
-
   attr_accessor :game
 
   def initialize
@@ -23,5 +22,4 @@ class SudokuSolver
   def count
     game.count
   end
-
 end

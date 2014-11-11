@@ -4,7 +4,6 @@
 # min to max: series.result = 5050, e.g: (1 + 2 + 3 ... + 99 + 100)
 
 class SumSeries
-
   def initialize(min, max)
     @sum = (min..max)
   end
@@ -12,5 +11,4 @@ class SumSeries
   def result
     @sum.reduce(:+)
   end
-
 end

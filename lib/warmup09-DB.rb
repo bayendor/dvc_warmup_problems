@@ -26,9 +26,9 @@ class SudokuSolver
     filename = File.join(File.dirname(__FILE__), filename)
     game_number = sprintf('%02d', game_number)
     File.open(filename) do |file|
-      while(line = file.gets.chomp)
+      while (line = file.gets.chomp)
         if line =~ /Grid #{game_number}/
-          while(line = file.gets.chomp)
+          while (line = file.gets.chomp)
             break if line =~ /Grid/
             game_board << line.split('').map(&:to_i)
           end
@@ -39,7 +39,7 @@ class SudokuSolver
   end
 
   def to_s
-    game_board.map{ |row| row.join('') }.join("\n")
+    game_board.map { |row| row.join('') }.join("\n")
   end
 
   def potential_solutions(row, column_number)

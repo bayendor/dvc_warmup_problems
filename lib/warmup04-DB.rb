@@ -14,10 +14,10 @@ def calculate_string(problem_string)
   when ' * '
     num_one * num_two
   else ' / '
-    if num_two == 0
-      nil
-    else
-      num_one / num_two
-    end
+       if num_two == 0
+         nil
+       else
+         num_one / num_two
+       end
   end
 end
